@@ -105,3 +105,5 @@ $ source venv/bin/activate
 3. (Video en el que me base 'Fazt')[https://www.youtube.com/watch?v=T1intZyhXDU&ab_channel=Fazt]
 
 4. (Repositorio del video 'Fazt')[https://github.com/fazt/django_course]
+
+5. (Deploy app 'Fast)[https://www.youtube.com/watch?v=GE0Q8YNKNgs&list=WL&index=1&ab_channel=Fazt]
