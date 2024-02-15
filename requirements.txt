@@ -4,7 +4,7 @@ asgiref==3.7.2
 Brotli==1.1.0
 cffi==1.16.0
 dj-database-url==2.1.0
-Django==4.2.10
+Django==4.2
 django-admin-interface==0.28.5
 django-colorfield==0.11.0
 django-environ==0.11.2
