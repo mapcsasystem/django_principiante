@@ -1,0 +1,63 @@
+{% extends 'layouts/base.html' %}
+<!--  block pagename-->
+
+{% block pagename %} Task {% endblock pagename%}
+
+<!--  block content-->
+{% block content %}
+
+<h1>TASKS</h1>
+
+<div class="accordion" id="accordionExample">
+  {% for task in tasks%}
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="{{task}}">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#{{task.slug}}"
+        aria-expanded="false"
+        aria-controls="{{task.slug}}"
+      >
+        {% if task.done == True %}<i class="bi bi-check"></i> {% else %}
+        <i class="bi bi-alarm"></i>
+        <span style="padding-left: 5px"></span>
+        {% endif %} {{task.title}}
+      </button>
+    </h2>
+    <div
+      id="{{task.slug}}"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <p>{{task.description}}</p>
+        <ul class="list-group">
+          <li class="list-group-item">Project id: {{task.project.id}}</li>
+          <li class="list-group-item">
+            Project Título: {{task.project.title}}
+          </li>
+          <div class="d-flex gap-2 mt-3">
+            <button
+              type="button"
+              type="button"
+              class="btn btn-lg btn-danger col-6"
+            >
+              Delete
+            </button>
+            <button
+              type="button"
+              type="button"
+              class="btn btn-lg btn-success col-6"
+            >
+              Done
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endfor %} {% endblock %}
+</div>
