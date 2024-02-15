@@ -4,8 +4,8 @@ set -o errexit
 
 # poetry install
 
-pip install -r python manage.py requirements.txt
+pip install -r python3 manage.py requirements.txt
 # pip install --upgrade pip
 
-python manage.py collectstatic --no-input
-python manage.py migrate
+python3 manage.py collectstatic --no-input
+python3 manage.py migrate
